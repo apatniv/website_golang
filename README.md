@@ -3,6 +3,7 @@
 Uses [taskfile](https://taskfile.dev/) to run examples and test cases
 
 
+
 ## Running the test_cases
 
 ```bash
@@ -27,6 +28,18 @@ ok      github.com/apatniv/website_golang/graphs        (cach
 
 
 ### Strongly connected components Example
+
+```mermaid
+graph TB;
+    a -->b;
+    b --> a;
+    c --> d;
+    d --> c;
+    a --> c
+    b --> d
+```
+
+
 ```bash
 (ins)-> task example
 task: [example] go run main.go
