@@ -1,4 +1,4 @@
-# This repo contains all go related code written for [blog](https://www.vivekakupatni.com/)
+# This repo contains all go related code written for [my blog](https://www.vivekakupatni.com/)
 
 Uses [taskfile](https://taskfile.dev/) to run examples and test cases
 
