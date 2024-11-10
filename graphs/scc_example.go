@@ -2,8 +2,8 @@ package graphs
 
 import "log/slog"
 
-// Example runs a strongly connected algorithm on a simple graph
-func Example() {
+// SccExample runs a strongly connected algorithm on a simple graph
+func SccExample() {
 	slog.Info("Running the SCC example")
 	edges := []Edge[string]{
 		{"a", "b"},

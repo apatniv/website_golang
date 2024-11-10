@@ -1,21 +1,16 @@
 version: '3'
 
+env:
+  PATH_PREFIX: $HOME/.local/go/bin:$HOME/go/bin:$PATH
 
 tasks:
-  
-  default:
-    desc: Default task
-    cmds:
-      - task example
-  
-  example:
-    desc: Runs the main example
-    cmds:
-      - go run main.go
-
   test:
-    desc: Runs the test cases
+    desc: Runs the test cases including static tests
     cmds:
-      - go test -v ./...
+      - PATH="{{.PATH_PREFIX}}" staticcheck ./...
+      - PATH="{{.PATH_PREFIX}}" golangci-lint run ./...
+      - go vet ./...
+      - go test -v -race ./...
+
 
   
